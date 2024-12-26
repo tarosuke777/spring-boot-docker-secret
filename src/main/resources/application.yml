@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-boot-docker-secret
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}    
+  jpa:
+    hibernate:
+      ddl-auto: create
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: secret-demo
+    password: ${mysql_user_password} 
